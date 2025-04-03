@@ -13,7 +13,7 @@ const Footer = () => {
     i18next.changeLanguage(i18next.language);
   }, []);
   return (
-    <div className="w-full min-h-[16vh] bg-[#000000] flex flex-col justify-center items-center gap-3 pt-3 pb-16 text-white text-[14px] leading-[30px] ">
+    <div className="w-full min-h-[16vh] bg-[#000000] flex flex-col justify-center items-center gap-3 pt-3 pb-16 lg:pb-3 text-white text-[14px] leading-[30px] ">
       <span>@2025 Casa Lalla Takekoust</span>
       <span>Lalla Takerkoust, Marrakech 40000 Morocco</span>
       <div className="w-full flex justify-center items-center gap-4 px-3 py-2">
