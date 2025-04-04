@@ -104,7 +104,7 @@ const Activities = () => {
       <div className="w-full flex flex-col justify-center items-center gap-4 pt-10 pb-5">
         <Slides />
         <div className="w-full h-full flex flex-col justify-start items-center gap-1 text-center px-5 lg:px-32">
-          <h1 className="text-[20px] leading-[36px]  font-sackerCothic uppercase text-secondary_2 my-10">
+          <h1 className="text-[20px] leading-[36px]  font-azahra uppercase text-primary_2 my-10">
             <TypeAnimation
               sequence={[t("activities.title"), 2000]}
               wrapper="span"
@@ -115,7 +115,7 @@ const Activities = () => {
           <Accordion />
           <Link
             href="/custom-booking"
-            className="mt-8 py-2 px-8 w-full uppercase tracking-widest border border-secondary_2 text-secondary_2 rounded-lg text-[12px] leading-[34px] hover:bg-secondary_2 hover:text-white duration-200 transition-all ease-outb"
+            className="mt-8 py-2 px-8 w-full uppercase tracking-widest border border-primary_2 text-primary_2 rounded-lg text-[12px] leading-[34px] hover:bg-primary_2 hover:text-white duration-200 transition-all ease-outb"
           >
             {t("activities.book_experience")}
           </Link>

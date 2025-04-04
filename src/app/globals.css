@@ -67,6 +67,12 @@
   font-weight: 300;
   font-style: italic;
 }
+@font-face {
+  font-family: "Azahra";
+  src: url("./fonts/Azahra.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
   --white: #ffffff;

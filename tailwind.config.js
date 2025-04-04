@@ -24,6 +24,7 @@ module.exports = {
         dominica: ["DOMINICA", "serif"],
         mollyserif: ["MollySerifN", "serif"],
         cormorantGaramond: ["CormorantGaramond", "sans-serif"],
+        azahra: ["Azahra", "sans-serif"],
       },
       backgroundImage: {
         "custom-gradient":

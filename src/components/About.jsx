@@ -28,7 +28,7 @@ const About = () => {
       </div>
       <div className=" w-full py-5 p-0 lg:p-10">
         <div className="w-full h-full flex flex-col justify-center items-center gap-1 text-center shadow-md rounded-lg lg:p-20 p-8">
-          <h1 className="text-[20px] leading-[36px]  font-sackerCothic uppercase text-primary_2 mb-5">
+          <h1 className="text-[20px] leading-[36px]  font-azahra uppercase text-primary_2 mb-5">
             <TypeAnimation
               sequence={[t("about.title"), 2000]}
               wrapper="span"
@@ -50,7 +50,7 @@ const About = () => {
           </p>
           <Link
             href="/booking"
-            className="mt-4 py-2 px-8 uppercase tracking-widest border border-secondary_2 text-secondary_2 rounded-lg text-[12px] leading-[34px] hover:bg-secondary_2 hover:text-white duration-200 transition-all ease-out font-sackerCothic"
+            className="mt-4 py-2 px-8 uppercase tracking-widest border border-primary_2 text-primary_2 rounded-lg text-[12px] leading-[34px] hover:bg-primary_2 hover:text-white duration-200 transition-all ease-out font-azahra"
           >
             {t("about.button_book")}
           </Link>
