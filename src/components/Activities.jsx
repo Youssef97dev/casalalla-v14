@@ -52,6 +52,7 @@ const Activities = () => {
       <div className="relative w-full">
         <Image
           src="https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/kmljbte7etemxsmpcj4d"
+          alt="casa lalla image"
           height={1000}
           width={1000}
           className="object-cover w-full h-full rounded-md md:block hidden"

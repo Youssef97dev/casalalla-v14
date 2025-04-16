@@ -66,6 +66,31 @@
     "title": "Discover Unmatched Comfort by the Shores of Lac Takerkoust",
     "content_1": "In the heart of atlas mountains and 8 minutes from the agafay desert,  Casa lalla is the latest addition to Marrakech’s thriving restaurants scene with the stunning view of the lake to enjoy exquisite seafood with minimal preparation, Using the best products treated with the greatest respect and expertise.",
     "content_2": "With an unmatched view on the lake, Casa Lalla Takerkoust is a one of a kind locale offering perfect escape from the hustle and bustle of everyday life. Enjoy breathtaking views, exceptional hospitality, and a range of activities that allow you to immerse yourself in the beauty of the surrounding landscape. Whether you're here for relaxation or adventure, we invite you to experience the magic of Lac Takerkoust.",
-    "button_book": "Book a room"
+    "button_book": "Book a room",
+    "title_2": "Stay"
+  },
+  "room_one": {
+    "title": "Room 1",
+    "capacity": "Capacity:",
+    "size": "Size:",
+    "description": "Rooftop open plan cavernous suite with Atlas Mountain Views from the bedroom,  Jbilet mountain views from the bathroom and sunset views over the circular ceremonial palm garden below.",
+    "price": "From 30 Euro",
+    "book": "Book"
+  },
+  "room_two": {
+    "title": "Room 2",
+    "capacity": "Capacity",
+    "size": "Size",
+    "description": "Rooftop open plan cavernous suite with Atlas Mountain Views from the bedroom,  Jbilet mountain views from the bathroom and sunset views over the circular ceremonial palm garden below.",
+    "price": "From 30 Euro",
+    "book": "Book"
+  },
+  "room_three": {
+    "title": "Room 3",
+    "capacity": "Capacity",
+    "size": "Size",
+    "description": "Rooftop open plan cavernous suite with Atlas Mountain Views from the bedroom,  Jbilet mountain views from the bathroom and sunset views over the circular ceremonial palm garden below.",
+    "price": "From 30 Euro",
+    "book": "Book"
   }
 }
