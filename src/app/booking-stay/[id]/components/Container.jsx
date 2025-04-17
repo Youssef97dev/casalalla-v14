@@ -16,8 +16,8 @@ const Container = () => {
   return (
     isClient && (
       <div className="w-full h-full flex flex-col justify-center items-center gap-5 p-3">
-        <Slide />
-        <Ameneties />
+        <Slide id={id} />
+        <Ameneties id={id} />
         <ReservationForm />
       </div>
     )

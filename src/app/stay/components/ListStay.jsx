@@ -40,6 +40,16 @@ const ListStay = () => {
       description: t("room_three.description"),
       price: t("room_three.price"),
     },
+    {
+      id: "4",
+      imageSrc:
+        "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/dar_ouzguita/nadu0rzz3safvvccebtb",
+      title: t("room_four.title"),
+      capacity: t("room_four.capacity"),
+      size: t("room_four.size"),
+      description: t("room_four.description"),
+      price: t("room_four.price"),
+    },
   ];
 
   useEffect(() => {
@@ -56,6 +66,7 @@ const ListStay = () => {
             return (
               <div className="w-full h-full" key={i}>
                 <Stay
+                  id={room.id}
                   imageSrc={room.imageSrc}
                   capacity={room.capacity}
                   size={room.size}

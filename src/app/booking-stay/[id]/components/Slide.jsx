@@ -22,7 +22,15 @@ const roomImages = [
   "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/dar_ouzguita/culalff5rxpbfqwdry7l",
 ];
 
-const Slide = () => {
+const roomImages_1 = [
+  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/dar_ouzguita/xudf449mxbdrautxekdt",
+  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/dar_ouzguita/j2qebic8qselsyesgrbc",
+  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/dar_ouzguita/vwomrw6ojwgb5gcukz1h",
+  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/dar_ouzguita/in4qfsdtdeuoq306ufp1",
+  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/dar_ouzguita/tvlvixptyfyphszl1j8n",
+];
+
+const Slide = ({ id }) => {
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
     setIsClient(true);
@@ -46,19 +54,34 @@ const Slide = () => {
           id="slider1"
         >
           <div className="swiper-wrapper">
-            {roomImages.map((image, i) => {
-              return (
-                <SwiperSlide key={i}>
-                  <Image
-                    src={`${image}`}
-                    alt="casa lalla image"
-                    height={1000}
-                    width={1000}
-                    className="object-cover w-full h-full rounded-md"
-                  />
-                </SwiperSlide>
-              );
-            })}
+            {id === "1" &&
+              roomImages_1.map((image, i) => {
+                return (
+                  <SwiperSlide key={i}>
+                    <Image
+                      src={`${image}`}
+                      alt="casa lalla image"
+                      height={1000}
+                      width={1000}
+                      className="object-cover w-full h-full rounded-md"
+                    />
+                  </SwiperSlide>
+                );
+              })}
+            {id !== "1" &&
+              roomImages.map((image, i) => {
+                return (
+                  <SwiperSlide key={i}>
+                    <Image
+                      src={`${image}`}
+                      alt="casa lalla image"
+                      height={1000}
+                      width={1000}
+                      className="object-cover w-full h-full rounded-md"
+                    />
+                  </SwiperSlide>
+                );
+              })}
           </div>
         </Swiper>
       </div>

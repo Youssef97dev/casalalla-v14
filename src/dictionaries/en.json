@@ -92,5 +92,13 @@
     "description": "Spacious open-plan suite featuring breathtaking views of Takerkoust Lake from the bedroom, while the bathroom offers stunning vistas of the surrounding mountains. Guests can also enjoy picturesque sunset views over the tranquil landscape, creating a perfect retreat in nature.",
     "price": "From €380",
     "book": "Book"
+  },
+  "room_four": {
+    "title": "Room 4",
+    "capacity": "Capacity",
+    "size": "Size",
+    "description": "Spacious open-plan suite featuring breathtaking views of Takerkoust Lake from the bedroom, while the bathroom offers stunning vistas of the surrounding mountains. Guests can also enjoy picturesque sunset views over the tranquil landscape, creating a perfect retreat in nature.",
+    "price": "From €380",
+    "book": "Book"
   }
 }

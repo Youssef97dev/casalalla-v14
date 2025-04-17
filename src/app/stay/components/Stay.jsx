@@ -4,7 +4,15 @@ import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import Link from "next/link";
 
-const Stay = ({ imageSrc, roomTitle, capacity, size, description, price }) => {
+const Stay = ({
+  id,
+  imageSrc,
+  roomTitle,
+  capacity,
+  size,
+  description,
+  price,
+}) => {
   const { t } = useTranslation();
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
@@ -37,7 +45,7 @@ const Stay = ({ imageSrc, roomTitle, capacity, size, description, price }) => {
         {price}
       </span>
       <Link
-        href={`/booking-stay/${roomTitle}`}
+        href={`/booking-stay/${id}`}
         className="py-2 px-8 w-1/2  uppercase tracking-widest bg-primary_2 border border-primary_2 rounded-lg text-[12px] leading-[34px] text-white hover:bg-white hover:text-primary_2 duration-200 transition-all ease-out"
       >
         {t("room_one.book")}
