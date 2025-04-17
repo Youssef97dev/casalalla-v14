@@ -6,7 +6,7 @@ const ReservationForm = () => {
       <h1 className="text-[25px] leading-[40px]  font-beaufortfor uppercase text-secondary_2">
         Your reservation
       </h1>
-      <div className="w-full flex flex-col justify-center items-start gap-1 font-beaufortfor">
+      <div className="w-full flex flex-col justify-center items-start gap-1 font-beaufortfor text-secondary_2">
         <label htmlFor="checkin">CHECK IN</label>
         <input
           type="date"
@@ -15,7 +15,7 @@ const ReservationForm = () => {
           className="w-full rounded-md p-2 border border-border_color focus:outline-none"
         />
       </div>
-      <div className="w-full flex flex-col justify-center items-start gap-1 font-beaufortfor">
+      <div className="w-full flex flex-col justify-center items-start gap-1 font-beaufortfor text-secondary_2">
         <label htmlFor="checkout">CHECK OUT</label>
         <input
           type="date"
@@ -24,7 +24,7 @@ const ReservationForm = () => {
           className="w-full rounded-md p-2 border border-border_color focus:outline-none"
         />
       </div>
-      <div className="w-full flex flex-col justify-center items-start gap-1 font-beaufortfor">
+      <div className="w-full flex flex-col justify-center items-start gap-1 font-beaufortfor text-secondary_2">
         <label htmlFor="adults">ADULTS</label>
         <input
           type="number"
