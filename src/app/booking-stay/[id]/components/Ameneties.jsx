@@ -12,7 +12,7 @@ const amanetiesList = [
   },
   {
     icon: <FaShower size={35} />,
-    title: "Double Shower",
+    title: "Rain Shower",
   },
   {
     icon: <PiRugLight size={35} />,
