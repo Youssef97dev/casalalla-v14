@@ -25,6 +25,7 @@ module.exports = {
         mollyserif: ["MollySerifN", "serif"],
         cormorantGaramond: ["CormorantGaramond", "sans-serif"],
         azahra: ["Azahra", "sans-serif"],
+        beaufortfor: ["Beaufortfor", "sans-serif"],
       },
       backgroundImage: {
         "custom-gradient":

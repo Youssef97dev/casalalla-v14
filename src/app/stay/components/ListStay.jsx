@@ -23,12 +23,22 @@ const ListStay = () => {
     {
       id: "2",
       imageSrc:
-        "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/dar_ouzguita/in4qfsdtdeuoq306ufp1",
+        "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/dar_ouzguita/eooe9qae7yd7l5zvutvm",
       title: t("room_two.title"),
-      capacity: t("room_one.capacity"),
-      size: t("room_one.size"),
+      capacity: t("room_two.capacity"),
+      size: t("room_two.size"),
       description: t("room_two.description"),
       price: t("room_two.price"),
+    },
+    {
+      id: "3",
+      imageSrc:
+        "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/dar_ouzguita/md5intok0vpd0awlgq1t",
+      title: t("room_three.title"),
+      capacity: t("room_three.capacity"),
+      size: t("room_three.size"),
+      description: t("room_three.description"),
+      price: t("room_three.price"),
     },
   ];
 

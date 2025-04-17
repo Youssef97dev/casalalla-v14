@@ -21,20 +21,24 @@ const Stay = ({ imageSrc, roomTitle, capacity, size, description, price }) => {
           className="object-cover w-full h-full rounded-md"
         />
       </div>
-      <h1 className="text-[25px] leading-[40px]  font-azahra uppercase text-primary_2">
+      <h1 className="text-[25px] leading-[40px]  font-azahra uppercase text-secondary_2">
         {roomTitle}
       </h1>
-      <span className="text-[14px] leading-[22px] text-primary_2">
+      <span className="text-[14px] leading-[22px] text-secondary_2 font-beaufortfor">
         {capacity} <b>2 persons</b>
       </span>
-      <span className="text-[14px] leading-[22px] text-primary_2">
+      <span className="text-[14px] leading-[22px] text-secondary_2 font-beaufortfor">
         {size} <b>14m2</b>
       </span>
-      <p className="text-[14px] leading-[22px] text-primary_2">{description}</p>
-      <span className="text-[14px] leading-[22px] text-primary_2">{price}</span>
+      <p className="text-[14px] leading-[22px] text-secondary_2 font-beaufortfor">
+        {description}
+      </p>
+      <span className="text-[14px] leading-[22px] text-secondary_2 font-beaufortfor">
+        {price}
+      </span>
       <Link
-        href="/stay-booking"
-        className="py-2 px-8 w-1/2 uppercase tracking-widest bg-primary_2 rounded-lg text-[12px] leading-[34px] text-white duration-200 transition-all ease-out"
+        href={`/booking-stay/${roomTitle}`}
+        className="py-2 px-8 w-1/2  uppercase tracking-widest bg-primary_2 border border-primary_2 rounded-lg text-[12px] leading-[34px] text-white hover:bg-white hover:text-primary_2 duration-200 transition-all ease-out"
       >
         {t("room_one.book")}
       </Link>
