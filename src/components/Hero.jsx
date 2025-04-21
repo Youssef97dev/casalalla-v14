@@ -32,7 +32,7 @@ const Hero = () => {
       <div className="absolute inset-0 backdrop-brightness-75 hidden lg:block m-3 rounded-md"></div>
 
       {/* Content */}
-      <div className="absolute top-64 left-5 pr-32 text-white text-[14px] font-azahra block lg:hidden">
+      <div className="absolute top-56 left-5 pr-28 text-white text-[14.5px] font-azahra tracking-[3px] block lg:hidden">
         <TypeAnimation
           sequence={[t("hero.text_1"), 3000, t("hero.text_2"), 3000]}
           wrapper="span"

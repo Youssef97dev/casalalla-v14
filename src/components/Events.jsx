@@ -30,7 +30,7 @@ const Events = () => {
       </div>
       <div className=" w-full">
         <div className="w-full h-full flex flex-col justify-center items-center gap-1 text-center shadow-md rounded-lg lg:p-20 p-8">
-          <h1 className="text-[20px] leading-[36px]  font-azahra uppercase text-primary_2 mb-5">
+          <h1 className="text-[20px] leading-[36px]  font-azahra tracking-[2px] uppercase text-primary_2 mb-5">
             <TypeAnimation
               sequence={[t("events.title"), 2000]}
               wrapper="span"

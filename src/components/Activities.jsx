@@ -107,7 +107,7 @@ const Activities = () => {
       <div className="w-full flex flex-col justify-center items-center gap-4 pt-10 pb-5 shadow-md rounded-lg px-5">
         <Slides />
         <div className="w-full h-full flex flex-col justify-start items-center gap-1 text-center  lg:px-16">
-          <h1 className="text-[20px] leading-[36px]  font-azahra uppercase text-primary_2 my-10">
+          <h1 className="text-[20px] leading-[36px]  font-azahra tracking-[2px] uppercase text-primary_2 my-10">
             <TypeAnimation
               sequence={[t("activities.title"), 2000]}
               wrapper="span"
