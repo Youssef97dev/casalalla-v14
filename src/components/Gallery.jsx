@@ -3,28 +3,28 @@ import Image from "next/image";
 import Link from "next/link";
 
 const imagesUrl = [
-  "https://res.cloudinary.com/dz7wroord/image/upload/c_thumb,h_427,w_640/v1/casa%20Lalla/gall2_vduxjy",
-  "https://res.cloudinary.com/dz7wroord/image/upload/c_thumb,h_427,w_640/v1/casa%20Lalla/L-167_uhoybh",
-  "https://res.cloudinary.com/dz7wroord/image/upload/c_thumb,h_427,w_640/v1/casa%20Lalla/casa-sunset_s64zzp",
+  "/images/gallery-1.jpeg",
+  "/images/gallery-2.jpeg",
+  "/images/gallery-3.jpeg",
 ];
 
 const Gallery = () => {
   return (
     <>
-      <div className="hidden md:flex w-full justify-between items-center space-x-2 p-3">
+      <div className="hidden md:flex w-full justify-between items-center space-x-2 px-3">
         {imagesUrl.map((image, index) => (
           <Link
             key={index}
             href="/gallery"
             target="_blank"
-            className="cursor-pointer"
+            className="cursor-pointer w-full h-full"
           >
             <div className="relative">
               <Image
                 src={image}
                 alt="casa lalla takerkoust gallery"
-                width={600}
-                height={600}
+                width={1000}
+                height={1000}
                 className="w-full h-full object-cover rounded-md"
               />
             </div>
@@ -34,7 +34,7 @@ const Gallery = () => {
       <Link href="/gallery" className="cursor-pointer p-3 rounded-md">
         <div className="flex h-full w-full justify-center items-center  relative md:hidden">
           <Image
-            src="https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/irjsnwijta06o7jrx8yf"
+            src="/images/hero-casalalla-large.jpg"
             alt="casa lalla tekerkoust gallery"
             width={600}
             height={700}

@@ -21,9 +21,10 @@ const Hero = () => {
       </div>
       <div className="w-full h-full px-3 py-3 hidden lg:block">
         <Image
-          src="https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/irjsnwijta06o7jrx8yf"
+          src="/images/hero-casalalla-large.jpg"
           height={2000}
           width={2000}
+          alt="hero casalalla takerkoust"
           className="object-cover h-full w-full rounded-md"
         />
       </div>

@@ -19,22 +19,25 @@ const Contact = () => {
     isClient && (
       <div
         id="contact"
-        className="w-full min-h-[60vh] flex md:flex-row flex-col-reverse"
+        className="w-full min-h-[60vh] flex md:flex-row flex-col-reverse p-3 gap-3"
       >
         <div className="relative w-full">
           <Image
             src="/Plant-1.png"
             height={1000}
             width={1000}
+            alt="contact casalalla takerkoust"
             className="object-cover w-full h-full"
           />
         </div>
         <div className="w-full min-h-[60vh]">
-          <div className="w-full p-5 lg:p-10">
-            <div className="w-full h-full flex flex-col justify-center items-center gap-4 text-center shadow-md lg:p-20 p-5 font-medium">
-              <img
+          <div className="w-full h-full">
+            <div className="w-full h-full flex flex-col justify-center items-center gap-4 text-center shadow-md rounded-lg lg:p-20 p-5 font-medium">
+              <Image
                 src="/logo-10.png"
                 alt="Logo Casa lalla"
+                width={1000}
+                height={1000}
                 className={`w-52 h-28`}
               />
               <p className="text-[11px] leading-[30px] uppercase text-secondary_2">

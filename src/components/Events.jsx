@@ -9,24 +9,26 @@ const Events = () => {
   return (
     <div
       id="events"
-      className="w-full h-full lg:h-screen flex md:flex-row flex-col-reverse p-3"
+      className="w-full h-full lg:h-screen flex md:flex-row flex-col-reverse p-3 gap-3"
     >
       <div className="relative w-full">
         <Image
-          src="https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/drefbaza84g3qdz1gkwj"
+          src="/images/events-large.jpg"
           height={1000}
           width={1000}
+          alt="events casalalla takerkoust"
           className="object-cover w-full h-full rounded-md md:block hidden"
         />
         <Image
-          src="https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/hu5d9sovjc4s6m9zviyu"
+          src="/images/events-small.jpg"
           height={1000}
           width={1000}
+          alt="events casalalla takerkoust"
           className="object-cover w-full h-full rounded-md md:hidden block"
         />
         {/* Filter */}
       </div>
-      <div className=" w-full py-5 p-0 lg:p-10">
+      <div className=" w-full">
         <div className="w-full h-full flex flex-col justify-center items-center gap-1 text-center shadow-md rounded-lg lg:p-20 p-8">
           <h1 className="text-[20px] leading-[36px]  font-azahra uppercase text-primary_2 mb-5">
             <TypeAnimation

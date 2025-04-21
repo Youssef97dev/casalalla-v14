@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import i18next from "../../i18n";
 
 const Footer = () => {
@@ -25,10 +26,22 @@ const Footer = () => {
         <span>Lalla Takerkoust, Marrakech 40000 Morocco</span>
         <div className="w-full flex justify-center items-center gap-4 px-3 py-2">
           <div className="cursor-pointer" onClick={() => changeLanguage("en")}>
-            <img src="/english.png" className="w-7 h-7" />
+            <Image
+              src="/english.png"
+              alt="language icon"
+              width={500}
+              height={500}
+              className="w-7 h-7"
+            />
           </div>
           <div className="cursor-pointer" onClick={() => changeLanguage("fr")}>
-            <img src="/france.png" className="w-7 h-7" />
+            <Image
+              src="/france.png"
+              alt="language icon"
+              width={500}
+              height={500}
+              className="w-7 h-7"
+            />
           </div>
         </div>
       </div>

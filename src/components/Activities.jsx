@@ -17,15 +17,15 @@ import "swiper/css/autoplay";
 
 const itemsMobile = [
   {
-    src: "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/hfrl3m9o4ip3hter3tuc",
+    src: "/images/activities-small-1.jpg",
     type: "image",
   },
   {
-    src: "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/o4ooppmdac4j4z0nyydx",
+    src: "/images/activities-small-2.jpg",
     type: "image",
   },
   {
-    src: "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/yjvuwne8b1fsr51ijhyj",
+    src: "/images/activities-small-3.jpg",
     type: "image",
   },
   {
@@ -47,11 +47,11 @@ const Activities = () => {
   return (
     <div
       id="activities"
-      className="w-full min-h-screen flex md:flex-row-reverse flex-col p-3"
+      className="w-full min-h-screen flex md:flex-row-reverse flex-col p-3 gap-3"
     >
       <div className="relative w-full">
         <Image
-          src="https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/kmljbte7etemxsmpcj4d"
+          src="/images/activities.jpg"
           alt="casa lalla image"
           height={1000}
           width={1000}
@@ -78,10 +78,12 @@ const Activities = () => {
                 return (
                   <SwiperSlide key={i}>
                     {item.type === "image" ? (
-                      <img
+                      <Image
                         src={`${item.src}`}
-                        className="object-cover w-full h-full rounded-md"
                         alt="itemImage"
+                        width={1000}
+                        height={1000}
+                        className="object-cover w-full h-full rounded-md"
                       />
                     ) : (
                       <video
@@ -102,9 +104,9 @@ const Activities = () => {
         </div>
         {/* Filter */}
       </div>
-      <div className="w-full flex flex-col justify-center items-center gap-4 pt-10 pb-5">
+      <div className="w-full flex flex-col justify-center items-center gap-4 pt-10 pb-5 shadow-md rounded-lg px-5">
         <Slides />
-        <div className="w-full h-full flex flex-col justify-start items-center gap-1 text-center px-5 lg:px-32">
+        <div className="w-full h-full flex flex-col justify-start items-center gap-1 text-center  lg:px-16">
           <h1 className="text-[20px] leading-[36px]  font-azahra uppercase text-primary_2 my-10">
             <TypeAnimation
               sequence={[t("activities.title"), 2000]}

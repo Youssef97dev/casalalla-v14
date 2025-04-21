@@ -4,54 +4,34 @@ import { useState, useEffect } from "react";
 
 const images = [
   {
-    src: "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/fxy4qfejaopcdeqzzavq",
-    thumbnail:
-      "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/fxy4qfejaopcdeqzzavq",
+    src: "/images/activities-slide-1.jpg",
   },
   {
-    src: "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/jem8xv0zui8wzo1lwtku",
-    thumbnail:
-      "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/jem8xv0zui8wzo1lwtku",
+    src: "/images/activities-slide-2.jpg",
   },
   {
-    src: "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/yni4ms1d9uupqtpmarsz",
-    thumbnail:
-      "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/yni4ms1d9uupqtpmarsz",
+    src: "/images/activities-slide-3.jpg",
   },
   {
-    src: "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/jigomi1wfd3eb9n50ahh",
-    thumbnail:
-      "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/jigomi1wfd3eb9n50ahh",
+    src: "/images/activities-slide-4.jpg",
   },
   {
-    src: "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/ukwmea3t3kmvpa9cg08i",
-    thumbnail:
-      "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/ukwmea3t3kmvpa9cg08i",
+    src: "/images/activities-slide-5.jpg",
   },
   {
-    src: "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/hapfzrqu1at0x0hahzqi",
-    thumbnail:
-      "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/hapfzrqu1at0x0hahzqi",
+    src: "/images/activities-slide-6.jpg",
   },
   {
-    src: "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/tnyk4ty6jmoxkvmpkcss",
-    thumbnail:
-      "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/tnyk4ty6jmoxkvmpkcss",
+    src: "/images/activities-slide-7.jpg",
   },
   {
-    src: "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/fz283m11oevyue91bn8h",
-    thumbnail:
-      "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/fz283m11oevyue91bn8h",
+    src: "/images/activities-slide-8.jpg",
   },
   {
-    src: "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/k530wqfiey0i2d9fhvow",
-    thumbnail:
-      "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/k530wqfiey0i2d9fhvow",
+    src: "/images/activities-slide-9.jpg",
   },
   {
-    src: "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/vda8t8i1tvblirlwxn57",
-    thumbnail:
-      "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/vda8t8i1tvblirlwxn57",
+    src: "/images/activities-slide-10.jpg",
   },
 ];
 
@@ -66,7 +46,7 @@ const Slides = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="relative w-[375px] h-72 lg:w-[500px] lg:h-96 px-5 lg:px-0 ">
+    <div className="relative w-full h-64 lg:w-[500px] lg:h-96 px-5 lg:px-0">
       {images.map((image, index) => (
         <div
           key={index}
