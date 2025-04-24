@@ -148,7 +148,8 @@ const Book = () => {
                       src={`${item}`}
                       width={1000}
                       height={1000}
-                      alt="images casa lalla takerkoust"
+                      alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
+                      priority
                       className="w-full h-full object-cover"
                     />
                   </SwiperSlide>
@@ -181,7 +182,8 @@ const Book = () => {
                       src={`${item}`}
                       width={1000}
                       height={1000}
-                      alt="casa lalla takerkoust booking image"
+                      alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
+                      priority
                       className="w-full h-full object-cover"
                     />
                     <div
@@ -201,7 +203,8 @@ const Book = () => {
               src={`/logo-2.png`}
               width={500}
               height={500}
-              alt="logo casa lalla takerkoust"
+              alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
+              priority
               className="w-[40%] max-h-full object-cover"
             />
           </div>

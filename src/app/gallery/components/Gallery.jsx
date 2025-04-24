@@ -97,6 +97,7 @@ const MemoizedImage = React.memo(({ src, alt }) => (
     height={300}
     loading="lazy" // Lazy loading
     placeholder="blur"
+    priority
     className="rounded-sm w-full h-full"
   />
 ));
@@ -117,7 +118,7 @@ const Gallery = () => {
             <div className="masonry-item relative shadow-lg hover:scale-105 transition-all ease-linear overflow-hidden">
               <MemoizedImage
                 src={image.src}
-                alt={`casa lalla takerkoust ${index}`}
+                alt={`Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla`}
               />
             </div>
           </Link>
