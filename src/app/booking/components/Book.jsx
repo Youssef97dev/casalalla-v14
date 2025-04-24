@@ -146,8 +146,8 @@ const Book = () => {
                   <SwiperSlide key={i}>
                     <Image
                       src={`${item}`}
-                      width={500}
-                      height={500}
+                      width={100}
+                      height={100}
                       alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
                       priority
                       className="w-full h-full object-cover"
