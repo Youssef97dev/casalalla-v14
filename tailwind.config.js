@@ -20,12 +20,8 @@ module.exports = {
         secondary_2: "var(--secondary_2)",
       },
       fontFamily: {
-        sackerCothic: ["Sacker-Gothics", "sans-serif"],
-        dominica: ["DOMINICA", "serif"],
-        mollyserif: ["MollySerifN", "serif"],
         cormorantGaramond: ["CormorantGaramond", "sans-serif"],
         azahra: ["Azahra", "sans-serif"],
-        beaufortfor: ["Beaufortfor", "sans-serif"],
       },
       backgroundImage: {
         "custom-gradient":

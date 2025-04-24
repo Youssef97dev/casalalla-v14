@@ -452,7 +452,7 @@ const Book = () => {
             </div>
           </div>
         ) : (
-          <div className="w-full flex items-center p-3.5 rounded text-[#00AB55] bg-[#DDF5F0] font-garamond mt-3">
+          <div className="w-full flex items-center p-3.5 rounded text-[#00AB55] bg-[#DDF5F0] mt-3">
             <span className="pr-2">
               <strong className="mr-1">Success!</strong>Thank you for your
               reservation.

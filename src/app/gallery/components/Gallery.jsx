@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import LightGallery from "lightgallery/react";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
-import lgVideo from "lightgallery/plugins/video";
 import Link from "next/link";
 
 const images = [
@@ -97,6 +96,7 @@ const MemoizedImage = React.memo(({ src, alt }) => (
     width={300}
     height={300}
     loading="lazy" // Lazy loading
+    placeholder="blur"
     className="rounded-sm w-full h-full"
   />
 ));
@@ -109,7 +109,7 @@ const Gallery = () => {
     <div id="gallery" className="w-full  py-5 px-4 ">
       <LightGallery
         speed={500}
-        plugins={[lgThumbnail, lgVideo]}
+        plugins={[lgThumbnail]}
         elementClassNames="masonry"
       >
         {images.map((image, index) => (
