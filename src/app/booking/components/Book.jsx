@@ -8,6 +8,7 @@ import DatePicker from "rsuite/DatePicker";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IoMdPerson } from "react-icons/io";
 import Link from "next/link";
+import Image from "next/image";
 
 // Import Swiper styles
 import "swiper/css";
@@ -19,23 +20,18 @@ import "swiper/css/autoplay";
 import "rsuite/DatePicker/styles/index.css";
 
 const items = [
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/i7mqgy4ik8mhnsj6iecr",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/a0hsbjyo00f33m7s7xjh",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/lu0oa3az4uglsw5rbtcb",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/yyxizo8d8yun6olceemx",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/casa11_mypsbw",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/ua80x5nvez8bkevotcf9",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/L-167_uhoybh",
+  "/images/book-large.jpg",
+  "/images/book-large-2.jpg",
+  "/images/book-large-3.jpg",
+  "/images/book-large-4.jpg",
+  "/images/book-large-5.jpg",
 ];
 
 const itemsMobile = [
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/g0gel0gr7eawfbrr3gzh",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/ozhlnzhixzekfblvs53j",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/zdeg62pnnarojbbmb6py",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/uuzzafwgkswrsjwhwhm3",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/cribaruuifpdgsaukc83",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/wg0wo6koyy3snzsq5nao",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/casa13_b0nbad",
+  "/images/activities-slide-2.jpg",
+  "/images/gallery-2.jpeg",
+  "/images/gallery-3.jpeg",
+  "/images/book-mobile.jpg",
 ];
 
 const options = [
@@ -51,57 +47,6 @@ const options = [
   { value: "10", label: "10" },
   { value: "11", label: "11" },
   { value: "12", label: "12" },
-];
-
-const salles = [
-  { value: "1", label: "1" },
-  { value: "2", label: "2" },
-  { value: "3", label: "3" },
-  { value: "4", label: "4" },
-  { value: "5", label: "5" },
-];
-
-const tablesCounts = [
-  {
-    salleValue: "1",
-    tables: [
-      { value: "001", label: "001" },
-      { value: "125", label: "125" },
-      { value: "130", label: "130" },
-    ],
-  },
-  {
-    salleValue: "2",
-    tables: [
-      { value: "002", label: "002" },
-      { value: "126", label: "126" },
-      { value: "131", label: "131" },
-    ],
-  },
-  {
-    salleValue: "3",
-    tables: [
-      { value: "003", label: "003" },
-      { value: "127", label: "127" },
-      { value: "132", label: "132" },
-    ],
-  },
-  {
-    salleValue: "4",
-    tables: [
-      { value: "004", label: "004" },
-      { value: "128", label: "128" },
-      { value: "133", label: "133" },
-    ],
-  },
-  {
-    salleValue: "5",
-    tables: [
-      { value: "005", label: "005" },
-      { value: "129", label: "129" },
-      { value: "134", label: "134" },
-    ],
-  },
 ];
 
 const time = [
@@ -120,8 +65,6 @@ const Book = () => {
   const [activeTab, setActiveTab] = useState(1);
   const [startDate, setStartDate] = useState(new Date());
   const [numberGuests, setNumberGuests] = useState(0);
-  const [sallesNumber, setSallesNumber] = useState(1);
-  const [tableNumber, setTableNumber] = useState(0);
   const [timeBook, setTimeBook] = useState("");
   const [isClient, setIsClient] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -157,8 +100,6 @@ const Book = () => {
             year: "numeric",
           }).format(startDate),
           time: timeBook,
-          salle: sallesNumber,
-          table: tableNumber,
           comment: formData.comment,
         });
         if (res.status === 200) {
@@ -203,10 +144,12 @@ const Book = () => {
               {items.map((item, i) => {
                 return (
                   <SwiperSlide key={i}>
-                    <img
+                    <Image
                       src={`${item}`}
+                      width={1000}
+                      height={1000}
+                      alt="images casa lalla takerkoust"
                       className="w-full h-full object-cover"
-                      alt="itemImage"
                     />
                   </SwiperSlide>
                 );
@@ -234,10 +177,12 @@ const Book = () => {
               {itemsMobile.map((item, i) => {
                 return (
                   <SwiperSlide key={i}>
-                    <img
+                    <Image
                       src={`${item}`}
-                      className="w-full max-h-full object-cover"
-                      alt="itemImage"
+                      width={1000}
+                      height={1000}
+                      alt="casa lalla takerkoust booking image"
+                      className="w-full h-full object-cover"
                     />
                     <div
                       className="absolute z-10 top-0 left-0 w-full h-full"
@@ -252,17 +197,19 @@ const Book = () => {
             </div>
           </Swiper>
           <div className="absolute w-full flex justify-center items-center top-3 z-20">
-            <img
+            <Image
               src={`/logo-2.png`}
+              width={500}
+              height={500}
+              alt="logo casa lalla takerkoust"
               className="w-[40%] max-h-full object-cover"
-              alt="itemImage"
             />
           </div>
         </div>
         {!messageSent ? (
           <div className="w-full flex flex-col justify-center items-center gap-4 bg-[#FFFFFF] py-4 px-3 lg:px-5">
             {activeTab === 1 && (
-              <div className="w-full flex flex-col justify-center items-center gap-4">
+              <div className="w-full flex flex-col justify-center items-center gap-4 lg:gap-8">
                 <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-4">
                   <div className="w-full flex flex-col justify-center items-start gap-2">
                     <strong className="text-[14px] leading-[20px] text-[#374151]">
@@ -289,37 +236,11 @@ const Book = () => {
                     />
                   </div>
                 </div>
-                <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-4">
-                  <div className="w-full flex flex-col justify-center items-start gap-2">
-                    <strong className="text-[14px] leading-[20px] text-[#374151]">
-                      Salles
-                    </strong>
-                    <Select
-                      defaultValue={salles[0]}
-                      options={salles}
-                      isSearchable={false}
-                      onChange={(e) => setSallesNumber(e.value)}
-                      className="w-full border border-gray-400 rounded-md outline-none text-[14px] text-[#374151] "
-                    />
-                  </div>
-                  <div className="w-full flex flex-col justify-center items-start gap-2">
-                    <strong className="text-[14px] leading-[20px] text-[#374151]">
-                      Tables
-                    </strong>
-                    <Select
-                      defaultValue={{ value: "0", label: "Select a table..." }}
-                      options={tablesCounts[sallesNumber - 1].tables}
-                      onChange={(e) => setTableNumber(e.value)}
-                      isSearchable={false}
-                      className="w-full border border-gray-400 rounded-md outline-none text-[14px] text-[#374151] "
-                    />
-                  </div>
-                </div>
-                <div className="w-full flex flex-col justify-center items-start gap-2">
+                <div className="w-full flex flex-col justify-center items-start lg:items-center gap-2">
                   <strong className="text-[14px] leading-[20px] text-[#374151]">
                     Time
                   </strong>
-                  <div className="w-full rounded-md flex justify-start items-center gap-2 overflow-auto pb-4">
+                  <div className="w-full lg:w-fit rounded-md flex justify-start items-center gap-2 overflow-auto pb-4">
                     {time.map((value) => (
                       <div
                         key={value}
@@ -537,7 +458,7 @@ const Book = () => {
               reservation.
             </span>
             <Link
-              href="https://casalallatakerkoust.com/"
+              href="/"
               className="ml-auto bg-[#00AB55] text-[#DDF5F0] rounded hover:opacity-80 px-3 py-1"
             >
               Home
