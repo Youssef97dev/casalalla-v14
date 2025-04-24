@@ -201,8 +201,8 @@ const Book = () => {
           <div className="absolute w-full flex justify-center items-center top-3 z-20">
             <Image
               src={`/logo-2.png`}
-              width={500}
-              height={500}
+              width={300}
+              height={300}
               alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
               priority
               className="w-[40%] max-h-full object-cover"

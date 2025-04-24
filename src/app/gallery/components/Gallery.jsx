@@ -97,7 +97,6 @@ const MemoizedImage = React.memo(({ src, alt }) => (
     height={300}
     loading="lazy" // Lazy loading
     placeholder="blur"
-    priority
     className="rounded-sm w-full h-full"
   />
 ));
