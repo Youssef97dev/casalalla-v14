@@ -26,7 +26,8 @@ const Contact = () => {
             src="/Plant-1.png"
             height={1000}
             width={1000}
-            alt="contact casalalla takerkoust"
+            alt="distance agafay lalla takerkoust, lalla takerkoust restaurant"
+            priority
             className="object-cover w-full h-full"
           />
         </div>
@@ -35,9 +36,10 @@ const Contact = () => {
             <div className="w-full h-full flex flex-col justify-center items-center gap-4 text-center shadow-md rounded-lg lg:p-20 p-5 font-medium">
               <Image
                 src="/logo-10.png"
-                alt="Logo Casa lalla"
+                alt="agafay takerkoust, lalla takerkoust agafay, agafay désert marrakech, casalalla"
                 width={1000}
                 height={1000}
+                priority
                 className={`w-52 h-28`}
               />
               <p className="text-[11px] leading-[30px] uppercase text-secondary_2">

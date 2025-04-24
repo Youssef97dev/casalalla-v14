@@ -56,9 +56,10 @@ const Slides = () => {
         >
           <Image
             src={image.src}
-            alt={`casa lalla takerkoust ${index + 1}`}
+            alt={`lalla takerkoust activités, lalla takerkoust marrakech, lalla takerkoust village, lalla takerkoust jet ski`}
             height={2000}
             width={2000}
+            priority
             className="object-cover w-full h-full shadow-md rounded-md"
           />
         </div>

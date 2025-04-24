@@ -52,9 +52,10 @@ const Activities = () => {
       <div className="relative w-full">
         <Image
           src="/images/activities.jpg"
-          alt="casa lalla image"
+          alt="agafay activities, agafay marrakech, agafay activité, lalla takerkoust activities"
           height={1000}
           width={1000}
+          priority
           className="object-cover w-full h-full rounded-md md:block hidden"
         />
         <div className="w-full h-[80vh] md:hidden block">
@@ -80,9 +81,10 @@ const Activities = () => {
                     {item.type === "image" ? (
                       <Image
                         src={`${item.src}`}
-                        alt="itemImage"
+                        alt="agafay activities, lalla takerkoust marrakech, agafay activité, lalla takerkoust activities"
                         width={1000}
                         height={1000}
+                        priority
                         className="object-cover w-full h-full rounded-md"
                       />
                     ) : (

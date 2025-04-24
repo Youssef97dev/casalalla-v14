@@ -28,18 +28,20 @@ const Footer = () => {
           <div className="cursor-pointer" onClick={() => changeLanguage("en")}>
             <Image
               src="/english.png"
-              alt="language icon"
+              alt="casalalla takerkoust lac"
               width={500}
               height={500}
+              priority
               className="w-7 h-7"
             />
           </div>
           <div className="cursor-pointer" onClick={() => changeLanguage("fr")}>
             <Image
               src="/france.png"
-              alt="language icon"
+              alt="barrage lalla takerkoust"
               width={500}
               height={500}
+              priority
               className="w-7 h-7"
             />
           </div>

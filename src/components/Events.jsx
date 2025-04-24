@@ -16,14 +16,16 @@ const Events = () => {
           src="/images/events-large.jpg"
           height={1000}
           width={1000}
-          alt="events casalalla takerkoust"
+          alt="lalla takerkoust lake, barrage lalla takerkoust, lalla takerkoust weather, lalla takerkoust activités"
+          priority
           className="object-cover w-full h-full rounded-md md:block hidden"
         />
         <Image
           src="/images/events-small.jpg"
           height={1000}
           width={1000}
-          alt="events casalalla takerkoust"
+          alt="casalalla, barrage lalla takerkoust activités, lac lalla takerkoust, lalla takerkoust marrakech"
+          priority
           className="object-cover w-full h-full rounded-md md:hidden block"
         />
         {/* Filter */}

@@ -22,9 +22,10 @@ const Gallery = () => {
             <div className="relative">
               <Image
                 src={image}
-                alt="casa lalla takerkoust gallery"
+                alt="casa lalla tekerkoust, agafay desert, white camel agafay, agafay activités"
                 width={1000}
                 height={1000}
+                priority
                 className="w-full h-full object-cover rounded-md"
               />
             </div>
@@ -35,9 +36,10 @@ const Gallery = () => {
         <div className="flex h-full w-full justify-center items-center  relative md:hidden">
           <Image
             src="/images/hero-casalalla-large.jpg"
-            alt="casa lalla tekerkoust gallery"
+            alt="casa lalla tekerkoust, agafay desert, white camel agafay, agafay activités"
             width={600}
             height={700}
+            priority
             className="w-full h-full object-cover rounded-md"
           />
           <div className="z-10 absolute inset-0 bg-[#000] h-full mix-blend-multiply opacity-20 rounded-md"></div>

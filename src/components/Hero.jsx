@@ -24,7 +24,8 @@ const Hero = () => {
           src="/images/hero-casalalla-large.jpg"
           height={2000}
           width={2000}
-          alt="hero casalalla takerkoust"
+          alt="jet ski lalla takerkoust, casa lalla takerkoust menu, quad lalla takerkoust, lalla takerkoust agafay"
+          priority
           className="object-cover h-full w-full rounded-md"
         />
       </div>

@@ -16,14 +16,16 @@ const About = () => {
           src="/images/about-large.jpg"
           height={1000}
           width={1000}
-          alt="about casalalla takerkoust"
+          alt="casa lalla takerkoust, agafay marrakech, agafay restaurant, lalla takerkoust restaurant"
+          priority
           className="object-cover w-full h-full rounded-md md:block hidden"
         />
         <Image
           src="/images/about-small.jpg"
           height={1000}
           width={1000}
-          alt="about casalalla takerkoust"
+          alt="casa lalla takerkoust, agafay marrakech, agafay restaurant, lalla takerkoust restaurant"
+          priority
           className="object-cover w-full h-full rounded-md md:hidden block"
         />
         {/* Filter */}
