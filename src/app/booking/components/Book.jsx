@@ -69,6 +69,7 @@ const Book = () => {
   const [isClient, setIsClient] = useState(false);
   const [loading, setLoading] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -118,97 +119,107 @@ const Book = () => {
   useEffect(() => {
     emailjs.init("1D9YARxa2KB7aQtKm");
     setIsClient(true);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024); // Adjust breakpoint as needed
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call on mount
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     isClient && (
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="w-full h-[50vh] hidden lg:block">
-          <Swiper
-            modules={[Navigation, Autoplay]}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-            }}
-            slidesPerView={2}
-            speed={1400}
-            loop={true}
-            navigation={{
-              nextEl: ".swiper-button-next-ex1",
-              prevEl: ".swiper-button-prev-ex1",
-            }}
-            className="swiper w-full h-full"
-            id="slider1"
-          >
-            <div className="swiper-wrapper">
-              {items.map((item, i) => {
-                return (
-                  <SwiperSlide key={i}>
-                    <Image
-                      src={`${item}`}
-                      width={300}
-                      height={300}
-                      alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
-                      priority
-                      className="w-full h-full object-cover"
-                    />
-                  </SwiperSlide>
-                );
-              })}
+        {isMobile ? (
+          <div className="w-full h-[50vh] relative block lg:hidden">
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              speed={1400}
+              loop={true}
+              navigation={{
+                nextEl: ".swiper-button-next-ex1",
+                prevEl: ".swiper-button-prev-ex1",
+              }}
+              className="swiper w-full h-full"
+              id="slider1"
+            >
+              <div className="swiper-wrapper">
+                {itemsMobile.map((item, i) => {
+                  return (
+                    <SwiperSlide key={i}>
+                      <Image
+                        src={`${item}`}
+                        width={300}
+                        height={300}
+                        alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
+                        priority
+                        className="w-full h-full object-cover"
+                      />
+                      <div
+                        className="absolute z-10 top-0 left-0 w-full h-full"
+                        style={{
+                          background:
+                            "linear-gradient(to bottom, #00000063, transparent)",
+                        }}
+                      ></div>
+                    </SwiperSlide>
+                  );
+                })}
+              </div>
+            </Swiper>
+            <div className="absolute w-full flex justify-center items-center top-3 z-20">
+              <Image
+                src={`/logo-2.png`}
+                width={300}
+                height={300}
+                alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
+                priority
+                className="w-[40%] max-h-full object-cover"
+              />
             </div>
-          </Swiper>
-        </div>
-        <div className="w-full h-[50vh] relative block lg:hidden">
-          <Swiper
-            modules={[Navigation, Autoplay]}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-            }}
-            speed={1400}
-            loop={true}
-            navigation={{
-              nextEl: ".swiper-button-next-ex1",
-              prevEl: ".swiper-button-prev-ex1",
-            }}
-            className="swiper w-full h-full"
-            id="slider1"
-          >
-            <div className="swiper-wrapper">
-              {itemsMobile.map((item, i) => {
-                return (
-                  <SwiperSlide key={i}>
-                    <Image
-                      src={`${item}`}
-                      width={300}
-                      height={300}
-                      alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
-                      priority
-                      className="w-full h-full object-cover"
-                    />
-                    <div
-                      className="absolute z-10 top-0 left-0 w-full h-full"
-                      style={{
-                        background:
-                          "linear-gradient(to bottom, #00000063, transparent)",
-                      }}
-                    ></div>
-                  </SwiperSlide>
-                );
-              })}
-            </div>
-          </Swiper>
-          <div className="absolute w-full flex justify-center items-center top-3 z-20">
-            <Image
-              src={`/logo-2.png`}
-              width={300}
-              height={300}
-              alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
-              priority
-              className="w-[40%] max-h-full object-cover"
-            />
           </div>
-        </div>
+        ) : (
+          <div className="w-full h-[50vh] hidden lg:block">
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              slidesPerView={2}
+              speed={1400}
+              loop={true}
+              navigation={{
+                nextEl: ".swiper-button-next-ex1",
+                prevEl: ".swiper-button-prev-ex1",
+              }}
+              className="swiper w-full h-full"
+              id="slider1"
+            >
+              <div className="swiper-wrapper">
+                {items.map((item, i) => {
+                  return (
+                    <SwiperSlide key={i}>
+                      <Image
+                        src={`${item}`}
+                        width={300}
+                        height={300}
+                        alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
+                        priority
+                        className="w-full h-full object-cover"
+                      />
+                    </SwiperSlide>
+                  );
+                })}
+              </div>
+            </Swiper>
+          </div>
+        )}
+
         {!messageSent ? (
           <div className="w-full flex flex-col justify-center items-center gap-4 bg-[#FFFFFF] py-4 px-3 lg:px-5">
             {activeTab === 1 && (
