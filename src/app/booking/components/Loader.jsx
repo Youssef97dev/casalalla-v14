@@ -24,9 +24,9 @@ const Loader = () => {
   return (
     <>
       {isClient ? (
-        <div className="bg-[#F5EDE2] w-full flex flex-col justify-start items-center h-[130vh] px-0 lg:px-20 xl:px-96 py-0 lg:py-10">
+        <div className="bg-[#F5EDE2] w-full h-full flex flex-col justify-start items-center px-0 lg:px-20 xl:px-96 py-0 lg:py-10">
           <Book />
-          <div className="w-full h-fit flex gap-2 justify-center text-[#333333] items-center">
+          <div className="w-full h-full py-5 flex gap-2 justify-center text-[#333333] items-center">
             <Link
               target="_blank"
               href="mailto:reservations@casalallatakerkoust.com"
