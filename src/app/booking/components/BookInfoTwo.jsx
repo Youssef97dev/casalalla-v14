@@ -1,5 +1,3 @@
-import React from "react";
-
 const BookInfoTwo = ({ formData, handleChange }) => {
   return (
     <>

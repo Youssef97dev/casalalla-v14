@@ -1,5 +1,3 @@
-import React from "react";
-
 const BookInfoTree = ({ startDate, timeBook, numberGuests, formData }) => {
   return (
     <>

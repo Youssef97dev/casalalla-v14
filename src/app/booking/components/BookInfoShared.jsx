@@ -1,4 +1,3 @@
-import React from "react";
 import { IoMdPerson } from "react-icons/io";
 
 const BookInfoShared = ({ startDate, timeBook, numberGuests }) => {
