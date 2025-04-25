@@ -53,7 +53,7 @@ const About = () => {
             {t("about.content_4")}
           </p>
           <Link
-            href="http://wa.me/212675480103"
+            href="/booking"
             className="mt-4 py-2 px-8 uppercase tracking-widest border border-primary_2 text-primary_2 rounded-lg text-[12px] leading-[34px] hover:bg-primary_2 hover:text-white duration-200 transition-all ease-out font-azahra"
           >
             {t("about.button_book")}
