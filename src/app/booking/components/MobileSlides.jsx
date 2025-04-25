@@ -5,10 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
 const itemsMobile = [
-  "/images/activities-slide-2.jpg",
-  "/images/gallery-2.jpeg",
-  "/images/gallery-3.jpeg",
-  "/images/book-mobile.jpg",
+  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/jem8xv0zui8wzo1lwtku",
+  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/wc2stizi7i5s5wgeeogy",
+  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/prpqg6qvbzkgcrqhqlpz",
+  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/rpgxdw9fkmlskq2r871m",
 ];
 
 const MobileSlides = () => {

@@ -5,11 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
 const items = [
-  "/images/book-large.jpg",
-  "/images/book-large-2.jpg",
-  "/images/book-large-3.jpg",
-  "/images/book-large-4.jpg",
-  "/images/book-large-5.jpg",
+  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/i7mqgy4ik8mhnsj6iecr",
+  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/a0hsbjyo00f33m7s7xjh",
+  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/lu0oa3az4uglsw5rbtcb",
+  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/casa%20Lalla/yyxizo8d8yun6olceemx",
 ];
 
 const DesktopSlides = () => {
