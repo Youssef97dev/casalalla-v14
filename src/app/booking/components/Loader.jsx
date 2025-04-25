@@ -1,7 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { CircleLoader } from "react-spinners";
-import Book from "./Book";
+const Book = dynamic(() => import("./Book"), {
+  ssr: false,
+});
 import Link from "next/link";
 import {
   FaSquareWhatsapp,
@@ -14,7 +17,7 @@ const Loader = () => {
 
   useEffect(() => {
     // Simulate loading time
-    const timer = setTimeout(() => setIsClient(true), 2500);
+    const timer = setTimeout(() => setIsClient(true), 1500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -23,7 +26,7 @@ const Loader = () => {
       {isClient ? (
         <div className="bg-[#F5EDE2] w-full flex flex-col justify-start items-center h-[130vh] px-0 lg:px-20 xl:px-96 py-0 lg:py-10">
           <Book />
-          <div className="w-full h-full flex gap-2 justify-center text-[#333333] items-center">
+          <div className="w-full h-fit flex gap-2 justify-center text-[#333333] items-center">
             <Link
               target="_blank"
               href="mailto:reservations@casalallatakerkoust.com"
