@@ -2,64 +2,25 @@
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { ClockLoader } from "react-spinners";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import Select from "react-select";
-import DatePicker from "rsuite/DatePicker";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { IoMdPerson } from "react-icons/io";
 import Link from "next/link";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+
+import BookInfoOne from "./BookInfoOne";
+import BookInfoTwo from "./BookInfoTwo";
+import BookInfoTree from "./BookInfoTree";
+import BookInfoShared from "./BookInfoShared";
+const MobileSlides = dynamic(() => import("./MobileSlides"), {
+  ssr: false,
+});
+const DesktopSlides = dynamic(() => import("./DesktopSlides"), {
+  ssr: false,
+});
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
-
-import "rsuite/DatePicker/styles/index.css";
-
-const items = [
-  "/images/book-large.jpg",
-  "/images/book-large-2.jpg",
-  "/images/book-large-3.jpg",
-  "/images/book-large-4.jpg",
-  "/images/book-large-5.jpg",
-];
-
-const itemsMobile = [
-  "/images/activities-slide-2.jpg",
-  "/images/gallery-2.jpeg",
-  "/images/gallery-3.jpeg",
-  "/images/book-mobile.jpg",
-];
-
-const options = [
-  { value: "1", label: "1" },
-  { value: "2", label: "2" },
-  { value: "3", label: "3" },
-  { value: "4", label: "4" },
-  { value: "5", label: "5" },
-  { value: "6", label: "6" },
-  { value: "7", label: "7" },
-  { value: "8", label: "8" },
-  { value: "9", label: "9" },
-  { value: "10", label: "10" },
-  { value: "11", label: "11" },
-  { value: "12", label: "12" },
-];
-
-const time = [
-  "13:00",
-  "13:15",
-  "13:30",
-  "13:45",
-  "14:00",
-  "14:15",
-  "14:30",
-  "14:45",
-  "15:00",
-];
 
 const Book = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -130,302 +91,42 @@ const Book = () => {
   return (
     isClient && (
       <div className="w-full flex flex-col justify-center items-center">
-        {isMobile ? (
-          <div className="w-full h-[50vh] relative block lg:hidden">
-            <Swiper
-              modules={[Navigation, Autoplay]}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: false,
-              }}
-              speed={1400}
-              loop={true}
-              navigation={{
-                nextEl: ".swiper-button-next-ex1",
-                prevEl: ".swiper-button-prev-ex1",
-              }}
-              className="swiper w-full h-full"
-              id="slider1"
-            >
-              <div className="swiper-wrapper">
-                {itemsMobile.map((item, i) => {
-                  return (
-                    <SwiperSlide key={i}>
-                      <Image
-                        src={`${item}`}
-                        width={300}
-                        height={300}
-                        alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
-                        priority
-                        className="w-full h-full object-cover"
-                      />
-                      <div
-                        className="absolute z-10 top-0 left-0 w-full h-full"
-                        style={{
-                          background:
-                            "linear-gradient(to bottom, #00000063, transparent)",
-                        }}
-                      ></div>
-                    </SwiperSlide>
-                  );
-                })}
-              </div>
-            </Swiper>
-            <div className="absolute w-full flex justify-center items-center top-3 z-20">
-              <Image
-                src={`/logo-2.png`}
-                width={300}
-                height={300}
-                alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
-                priority
-                className="w-[40%] max-h-full object-cover"
-              />
-            </div>
-          </div>
-        ) : (
-          <div className="w-full h-[50vh] hidden lg:block">
-            <Swiper
-              modules={[Navigation, Autoplay]}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: false,
-              }}
-              slidesPerView={2}
-              speed={1400}
-              loop={true}
-              navigation={{
-                nextEl: ".swiper-button-next-ex1",
-                prevEl: ".swiper-button-prev-ex1",
-              }}
-              className="swiper w-full h-full"
-              id="slider1"
-            >
-              <div className="swiper-wrapper">
-                {items.map((item, i) => {
-                  return (
-                    <SwiperSlide key={i}>
-                      <Image
-                        src={`${item}`}
-                        width={300}
-                        height={300}
-                        alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
-                        priority
-                        className="w-full h-full object-cover"
-                      />
-                    </SwiperSlide>
-                  );
-                })}
-              </div>
-            </Swiper>
-          </div>
-        )}
+        {isMobile ? <MobileSlides /> : <DesktopSlides />}
 
         {!messageSent ? (
           <div className="w-full flex flex-col justify-center items-center gap-4 bg-[#FFFFFF] py-4 px-3 lg:px-5">
             {activeTab === 1 && (
-              <div className="w-full flex flex-col justify-center items-center gap-4 lg:gap-8">
-                <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-4">
-                  <div className="w-full flex flex-col justify-center items-start gap-2">
-                    <strong className="text-[14px] leading-[20px] text-[#374151]">
-                      Date
-                    </strong>
-                    <DatePicker
-                      oneTap
-                      placeholder="Select Date"
-                      className="w-full border border-gray-400 rounded-md outline-none text-[14px] text-[#374151]"
-                      value={startDate}
-                      onChange={setStartDate}
-                    />
-                  </div>
-                  <div className="w-full flex flex-col justify-center items-start gap-2">
-                    <strong className="text-[14px] leading-[20px] text-[#374151]">
-                      Number of people
-                    </strong>
-                    <Select
-                      defaultValue={options[0]}
-                      options={options}
-                      isSearchable={false}
-                      onChange={(e) => setNumberGuests(e.value)}
-                      className="w-full border border-gray-400 rounded-md outline-none text-[14px] text-[#374151] "
-                    />
-                  </div>
-                </div>
-                <div className="w-full flex flex-col justify-center items-start lg:items-center gap-2">
-                  <strong className="text-[14px] leading-[20px] text-[#374151]">
-                    Time
-                  </strong>
-                  <div className="w-full lg:w-fit rounded-md flex justify-start items-center gap-2 overflow-auto pb-4">
-                    {time.map((value) => (
-                      <div
-                        key={value}
-                        onClick={() => setTimeBook(value)}
-                        className={`text-[14px] leading-[16px] rounded-lg px-2 py-2 lg:py-4 lg:px-4 bg-[#e5e7eb] text-[#374151] hover:bg-primary hover:text-white cursor-pointer ${
-                          timeBook === value && "bg-book_btn text-white"
-                        }`}
-                      >
-                        {value}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <BookInfoOne
+                startDate={startDate}
+                setStartDate={setStartDate}
+                setNumberGuests={setNumberGuests}
+                timeBook={timeBook}
+                setTimeBook={setTimeBook}
+              />
             )}
             {activeTab === 2 && (
               <div className="w-full flex flex-col justify-center items-center gap-4">
-                <div className="w-full gap-2 rounded-lg text-gray-800 border border-gray-200 flex justify-between items-center py-2 px-4 bg-[#F3F4F6] mb-4">
-                  <div>
-                    <strong class="text-sm">Your reservation</strong>
-                    <div class="text-sm text-gray-500">
-                      {new Intl.DateTimeFormat("en-En", {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      }).format(startDate)}
-                      {" - "}
-                      {timeBook}
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-end">
-                    <div className="flex items-center gap-1">
-                      <strong>{numberGuests}</strong>
-                      <IoMdPerson size={20} />
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-4">
-                  <div className="w-full flex flex-col justify-center items-start gap-2">
-                    <strong className="text-[14px] leading-[20px] text-[#374151] flex justify-center items-center gap-2">
-                      <span>First name</span>
-                      <span className="text-red-500">*</span>
-                    </strong>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      required
-                      className="w-full border py-2 px-3 border-gray-400 rounded-md outline-none text-[14px] text-[#374151]"
-                    />
-                  </div>
-                  <div className="w-full flex flex-col justify-center items-start gap-2">
-                    <strong className="text-[14px] leading-[20px] text-[#374151] flex justify-center items-center gap-2">
-                      <span>Last name</span>
-                      <span className="text-red-500">*</span>
-                    </strong>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      required
-                      className="w-full border py-2 px-3 border-gray-400 rounded-md outline-none text-[14px] text-[#374151]"
-                    />
-                  </div>
-                </div>
-                <div className="w-full flex flex-col justify-center items-start gap-2">
-                  <strong className="text-[14px] leading-[20px] text-[#374151] flex justify-center items-center gap-2">
-                    <span>Email</span>
-                    <span className="text-red-500">*</span>
-                  </strong>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full border py-2 px-3 border-gray-400 rounded-md outline-none text-[14px] text-[#374151]"
-                  />
-                </div>
-                <div className="w-full flex flex-col justify-center items-start gap-2">
-                  <strong className="text-[14px] leading-[20px] text-[#374151] flex justify-center items-center gap-2">
-                    <span>Phone</span>
-                    <span className="text-red-500">*</span>
-                  </strong>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="w-full border py-2 px-3 border-gray-400 rounded-md outline-none text-[14px] text-[#374151]"
-                  />
-                </div>
-                <div className="w-full flex flex-col justify-center items-start gap-2">
-                  <strong className="text-[14px] leading-[20px] text-[#374151]">
-                    Commentaire
-                  </strong>
-                  <textarea
-                    id="comment"
-                    name="comment"
-                    value={formData.comment}
-                    onChange={handleChange}
-                    rows={4}
-                    className="w-full border py-2 px-3 border-gray-400 rounded-md outline-none text-[14px] text-[#374151]"
-                  />
-                </div>
+                <BookInfoShared
+                  startDate={startDate}
+                  timeBook={timeBook}
+                  numberGuests={numberGuests}
+                />
+                <BookInfoTwo formData={formData} handleChange={handleChange} />
               </div>
             )}
             {activeTab === 3 && (
               <div className="w-full flex flex-col justify-center items-center gap-4">
-                <div className="w-full gap-2 rounded-lg text-gray-800 border border-gray-200 flex justify-between items-center py-2 px-4 bg-[#F3F4F6] mb-4">
-                  <div>
-                    <strong class="text-sm">Your reservation</strong>
-                    <div class="text-sm text-gray-500">
-                      {new Intl.DateTimeFormat("en-En", {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      }).format(startDate)}
-                      {" - "}
-                      {timeBook}
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-end">
-                    <div className="flex items-center gap-1">
-                      <strong>{numberGuests}</strong>
-                      <IoMdPerson size={20} />
-                    </div>
-                  </div>
-                </div>
-                <h1 className="text-[24px] leading-[26.4px] mr-auto text-gray-800">{`Please verify your information`}</h1>
-                <div className="w-full flex justify-start items-center gap-5 border-t border-gray-400 py-3 px-2">
-                  <span className="w-[30%]">Date:</span>
-                  <strong className="text-sm">
-                    {new Intl.DateTimeFormat("en-En", {
-                      day: "numeric",
-                      month: "long",
-                      year: "numeric",
-                    }).format(startDate)}
-                  </strong>
-                </div>
-                <div className="w-full flex justify-start items-center gap-5 border-t border-gray-400 py-3 px-2">
-                  <span className="w-[30%]">Time:</span>
-                  <strong className="text-sm">{timeBook}</strong>
-                </div>
-                <div className="w-full flex justify-start items-center gap-5 border-t border-gray-400 py-3 px-2">
-                  <span className="w-[30%]">People:</span>
-                  <strong className="text-sm">{numberGuests}</strong>
-                </div>
-                <div className="w-full flex justify-start items-center gap-5 border-t border-gray-400 py-3 px-2">
-                  <span className="w-[30%]">First name:</span>
-                  <strong className="text-sm">{formData.firstName}</strong>
-                </div>
-                <div className="w-full flex justify-start items-center gap-5 border-t border-gray-400 py-3 px-2">
-                  <span className="w-[30%]">Last name:</span>
-                  <strong className="text-sm">{formData.lastName}</strong>
-                </div>
-                <div className="w-full flex justify-start items-center gap-5 border-t border-gray-400 py-3 px-2">
-                  <span className="w-[30%]">Phone:</span>
-                  <strong className="text-sm">{formData.phone}</strong>
-                </div>
-                <div className="w-full flex justify-start items-center gap-5 border-t border-gray-400 py-3 px-2">
-                  <span className="w-[30%]">Email:</span>
-                  <strong className="text-sm">{formData.email}</strong>
-                </div>
+                <BookInfoShared
+                  startDate={startDate}
+                  timeBook={timeBook}
+                  numberGuests={numberGuests}
+                />
+                <BookInfoTree
+                  startDate={startDate}
+                  timeBook={timeBook}
+                  numberGuests={numberGuests}
+                  formData={formData}
+                />
               </div>
             )}
             <div className="w-full flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-3 lg:gap-36">
