@@ -16,7 +16,6 @@ const Gallery = () => {
           <Link
             key={index}
             href="/gallery"
-            target="_blank"
             className="cursor-pointer w-full h-full"
           >
             <div className="relative">

@@ -27,6 +27,28 @@ const time = [
   "14:30",
   "14:45",
   "15:00",
+  "15:15",
+  "15:30",
+  "15:45",
+  "16:00",
+  "16:15",
+  "16:30",
+  "16:45",
+  "17:00",
+  "17:15",
+  "17:30",
+  "17:45",
+  "18:00",
+  "18:15",
+  "18:30",
+  "18:45",
+  "19:00",
+  "19:15",
+  "19:30",
+  "19:45",
+  "20:00",
+  "20:15",
+  "20:30",
 ];
 
 const BookInfoOne = ({
@@ -64,11 +86,11 @@ const BookInfoOne = ({
           />
         </div>
       </div>
-      <div className="w-full flex flex-col justify-center items-start lg:items-center gap-2">
+      <div className="w-full flex flex-col justify-center items-start lg:items-center gap-2 px-0 lg:px-10">
         <strong className="text-[14px] leading-[20px] text-[#374151]">
           Time
         </strong>
-        <div className="w-full lg:w-fit rounded-md flex justify-start items-center gap-2 overflow-auto pb-4">
+        <div className="w-full rounded-md flex justify-start items-center gap-2 overflow-auto pb-4">
           {time.map((value) => (
             <div
               key={value}

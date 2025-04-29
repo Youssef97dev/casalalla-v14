@@ -22,10 +22,9 @@ const Hero = () => {
       <div className="w-full h-full px-3 py-3 hidden lg:block">
         <Image
           src="/images/hero-casalalla-large.jpg"
+          alt="jet ski lalla takerkoust, casa lalla takerkoust menu, quad lalla takerkoust, lalla takerkoust agafay"
           height={2000}
           width={2000}
-          alt="jet ski lalla takerkoust, casa lalla takerkoust menu, quad lalla takerkoust, lalla takerkoust agafay"
-          priority
           className="object-cover h-full w-full rounded-md"
         />
       </div>

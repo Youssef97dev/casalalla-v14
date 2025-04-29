@@ -54,7 +54,7 @@ const MobileSlides = () => {
       </Swiper>
       <div className="absolute w-full flex justify-center items-center top-3 z-20">
         <Image
-          src={`/logo-2.png`}
+          src={`/logo-6.png`}
           width={300}
           height={300}
           alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
@@ -63,6 +63,9 @@ const MobileSlides = () => {
           priority
           className="w-[40%] max-h-full object-cover"
         />
+      </div>
+      <div className="absolute w-full flex justify-center items-center top-1/3 z-20">
+        <h1 className="font-azahra text-white text-[30px]">Booking Request</h1>
       </div>
     </div>
   );

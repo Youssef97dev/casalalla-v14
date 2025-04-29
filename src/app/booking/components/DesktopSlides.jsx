@@ -12,7 +12,7 @@ const items = [
 
 const DesktopSlides = () => {
   return (
-    <div className="w-full h-[50vh] hidden lg:block">
+    <div className="relative w-full h-[50vh] hidden lg:block">
       <Swiper
         modules={[Navigation, Autoplay]}
         autoplay={{
@@ -43,11 +43,22 @@ const DesktopSlides = () => {
                   priority
                   className="w-full h-full object-cover"
                 />
+                <div
+                  className="absolute z-30 bottom-0 left-0 w-full h-full"
+                  style={{
+                    background:
+                      "linear-gradient(to top, #00000063, transparent)",
+                  }}
+                ></div>
               </SwiperSlide>
             );
           })}
         </div>
       </Swiper>
+
+      <div className="absolute w-full flex justify-center items-center bottom-0 z-20">
+        <h1 className="font-azahra text-white text-[50px]">Booking Request</h1>
+      </div>
     </div>
   );
 };
