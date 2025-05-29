@@ -4,7 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 export const metadata = {
   title: "Casa Lalla Takerkoust - Lalla Takerkoust Vibe Agafay Desert",
   description:
-    "Discover Casalalla Takerkoust Restaurant: A Culinary Gem Near Marrakech - Casalalla is a must-visit restaurant that offers a unique dining experience. Enjoy a delightful blend of traditional Moroccan and international cuisine, meticulously prepared with fresh, local ingredients. With breathtaking views of Takerkoust Lake and the Atlas Mountains, Casalalla provides the perfect backdrop for a memorable meal.",
+    "Casalalla Restaurant is a must-visit dining destination near Marrakech, located by the stunning barrage Lalla Takerkoust. This culinary gem offers an exceptional experience with a delightful blend of Moroccan cuisine and international dishes, all prepared with fresh, local ingredients. Enjoy breathtaking views of Lalla Takerkoust Lake and the Atlas Mountains, making it the perfect backdrop for a memorable meal.",
   keywords:
     "Casalalla, barrage lalla Takerkoust, lalla takerkoust lake, lalla takerkoust activities, restaurant, Moroccan cuisine, Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla",
   verification: {
