@@ -40,18 +40,22 @@ const About = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[16px] leading-[34px] px-0 2xl:px-12 ">
-            {t("about.content_1")}
-          </p>
-          <p className="text-[16px] leading-[34px] px-0 2xl:px-12 ">
-            {t("about.content_2")}
-          </p>
-          <p className="text-[16px] leading-[34px] px-0 2xl:px-12 ">
-            {t("about.content_3")}
-          </p>
-          <p className="text-[16px] leading-[34px] px-0 2xl:px-12 ">
-            {t("about.content_4")}
-          </p>
+          <p
+            dangerouslySetInnerHTML={{ __html: t("about.content_1") }}
+            className="text-[16px] leading-[34px] px-0 2xl:px-12 "
+          ></p>
+          <p
+            dangerouslySetInnerHTML={{ __html: t("about.content_2") }}
+            className="text-[16px] leading-[34px] px-0 2xl:px-12 "
+          ></p>
+          <p
+            dangerouslySetInnerHTML={{ __html: t("about.content_3") }}
+            className="text-[16px] leading-[34px] px-0 2xl:px-12 "
+          ></p>
+          <p
+            dangerouslySetInnerHTML={{ __html: t("about.content_4") }}
+            className="text-[16px] leading-[34px] px-0 2xl:px-12 "
+          ></p>
           <Link
             href="/booking"
             className="mt-4 py-2 px-8 uppercase tracking-widest border border-primary_2 text-primary_2 rounded-lg text-[12px] leading-[34px] hover:bg-primary_2 hover:text-white duration-200 transition-all ease-out font-azahra"
