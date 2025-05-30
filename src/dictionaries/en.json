@@ -16,15 +16,15 @@
   },
   "about": {
     "title": "Casa Lalla Takerkoust : exquisite cuisine and amazing panoramic view",
-    "content_1": "<b>Casa Lalla</b> welcomes its guests far from the sophistication and hustle and bustle of the city, this haven of peace is the ideal place to indulge in simple pleasures and savor the mild climate.",
-    "content_2": "The decor blends memories and heritage in a simple, quirky atmosphere that exudes the sweet scent of <b>formentera</b> <b>ibiza</b> <b>mykonos</b>.",
-    "content_3": "Much more than a <b>restaurant</b>, this <b>lakeside</b> spot is a veritable living space. <b>Restaurant</b>, <b>bar</b>, <b>swimming pool</b>, private cabanas - everything is designed for relaxing, sharing, celebrating and creating lasting memories.",
-    "content_4": "At <b>casa lalla</b>, you'll experience extravagant moments where the joy of being together and gourmet pleasures suspend the course of time - under the banner of <b>La Dolce Vita and festivities!</b>",
+    "content_1": "Casa Lalla welcomes its guests far from the sophistication and hustle and bustle of the city, this haven of peace is the ideal place to indulge in simple pleasures and savor the mild climate.",
+    "content_2": "The decor blends memories and heritage in a simple, quirky atmosphere that exudes the sweet scent of formentera ibiza mykonos.",
+    "content_3": "Much more than a restaurant, this lakeside spot is a veritable living space. Restaurant, bar, swimming pool, private cabanas - everything is designed for relaxing, sharing, celebrating and creating lasting memories.",
+    "content_4": "At casa lalla, you'll experience extravagant moments where the joy of being together and gourmet pleasures suspend the course of time - under the banner of La Dolce Vita and festivities!",
     "button_book": "Book a table"
   },
   "events": {
     "title": "Casa Lalla is a space for members to eat, drink and celebrate",
-    "content": "the unmatched beauty of our natural landscape is the perfect backdrop for your <b>event</b> or <b>celebration</b>. From <b>weddings</b>, <b>anniversaries</b> and  <b>birthdays</b> to <b>photo shoots</b> and <b>brand events</b>, you can make <b>Casa lalla</b> your own for an unforgettable time. whether intimate or grand, our specially designed experience will ensure your vision comes to life seamlessly."
+    "content": "the unmatched beauty of our natural landscape is the perfect backdrop for your event or celebration. From weddings, anniversaries and  birthdays to photo shoots and brand events, you can make Casa lalla your own for an unforgettable time. whether intimate or grand, our specially designed experience will ensure your vision comes to life seamlessly."
   },
   "activities": {
     "title": "Casa Lalla producing unique member experiences",
@@ -52,7 +52,8 @@
   },
   "contact": {
     "title": "Casa lalla takerkoust restaurant",
-    "open": "Open daily from 13H00 to 22H00",
+    "open": "Open Thursday to Sunday",
+    "open_time": "Opening hours : 1:00 PM to 10:00 PM",
     "title_2": "Get in Touch",
     "subtitle": "For gatherings, special celebrations, photo-shoots or more information about us please send us a message by using the contact form below",
     "span": "To email us :",

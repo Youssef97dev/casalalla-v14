@@ -35,18 +35,20 @@ const Contact = () => {
           <div className="w-full h-full">
             <div className="w-full h-full flex flex-col justify-center items-center gap-4 text-center shadow-md rounded-lg lg:p-20 p-5 font-medium">
               <Image
-                src="/logo-10.png"
+                src="/casalalla-logo.png"
                 alt="agafay takerkoust, lalla takerkoust agafay, agafay désert marrakech, casalalla"
                 width={1000}
                 height={1000}
                 priority
-                className={`w-52 h-28`}
+                className={`w-36`}
               />
               <p className="text-[11px] leading-[30px] uppercase text-secondary_2">
                 {t("contact.title")}
               </p>
               <p className="text-[11px] leading-[30px] uppercase text-secondary_2">
                 {t("contact.open")}
+                <br />
+                {t("contact.open_time")}
               </p>
               <div className="text-[11px] leading-[30px] uppercase text-secondary_2 flex justify-center items-center gap-2">
                 <span>Email : </span>
