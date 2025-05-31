@@ -15,7 +15,7 @@ const Loader = () => {
 
   useEffect(() => {
     // Simulate loading time
-    const timer = setTimeout(() => setIsClient(true), 2500);
+    const timer = setTimeout(() => setIsClient(true), 1000);
     return () => clearTimeout(timer);
   }, []);
 
