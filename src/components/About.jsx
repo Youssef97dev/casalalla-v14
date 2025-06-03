@@ -1,11 +1,21 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import { TypeAnimation } from "react-type-animation";
 
 const About = () => {
   const { t } = useTranslation();
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024); // Adjust breakpoint as needed
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call on mount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       id="about"
@@ -13,32 +23,19 @@ const About = () => {
     >
       <div className="relative w-full">
         <Image
-          src="/images/about-large.jpg"
+          src={isMobile ? "/images/about-large.jpg" : "/images/about-small.jpg"}
           height={1000}
           width={1000}
           alt="casa lalla takerkoust, agafay marrakech, agafay restaurant, lalla takerkoust restaurant"
           priority
           className="object-cover w-full h-full rounded-md md:block hidden"
         />
-        <Image
-          src="/images/about-small.jpg"
-          height={1000}
-          width={1000}
-          alt="casa lalla takerkoust, agafay marrakech, agafay restaurant, lalla takerkoust restaurant"
-          priority
-          className="object-cover w-full h-full rounded-md md:hidden block"
-        />
         {/* Filter */}
       </div>
       <div className=" w-full">
         <div className="w-full h-full flex flex-col justify-center items-center gap-1 text-center shadow-md rounded-lg lg:p-20 p-8">
           <h1 className="text-[20px] leading-[36px]  font-azahra tracking-[2px] uppercase text-primary_2 mb-5">
-            <TypeAnimation
-              sequence={[t("about.title"), 2000]}
-              wrapper="span"
-              speed={10}
-              repeat={Infinity}
-            />
+            {t("about.title")}
           </h1>
           <p className="text-[16px] leading-[34px] px-0 2xl:px-12 ">
             {t("about.content_1")}

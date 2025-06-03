@@ -1,12 +1,12 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Accordion from "./Accordion";
 import Slides from "./Slides";
 import { useTranslation } from "react-i18next";
-import { TypeAnimation } from "react-type-animation";
 
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -32,90 +32,88 @@ const itemsMobile = [
     src: "/video-4.mp4",
     type: "video",
   },
-  {
-    src: "/video-5.mp4",
-    type: "video",
-  },
-  {
-    src: "/video-6.mp4",
-    type: "video",
-  },
 ];
 
 const Activities = () => {
   const { t } = useTranslation();
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024); // Adjust breakpoint as needed
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call on mount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div
       id="activities"
       className="w-full min-h-screen flex md:flex-row-reverse flex-col p-3 gap-3"
     >
       <div className="relative w-full">
-        <Image
-          src="/images/activities.jpg"
-          alt="agafay activities, agafay marrakech, agafay activité, lalla takerkoust activities"
-          height={1000}
-          width={1000}
-          priority
-          className="object-cover w-full h-full rounded-md md:block hidden"
-        />
-        <div className="w-full h-[80vh] md:hidden block">
-          <Swiper
-            modules={[Navigation, Autoplay]}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-            }}
-            speed={1400}
-            loop={true}
-            navigation={{
-              nextEl: ".swiper-button-next-ex1",
-              prevEl: ".swiper-button-prev-ex1",
-            }}
-            className="swiper w-full h-full"
-            id="slider1"
-          >
-            <div className="swiper-wrapper">
-              {itemsMobile.map((item, i) => {
-                return (
-                  <SwiperSlide key={i}>
-                    {item.type === "image" ? (
-                      <Image
-                        src={`${item.src}`}
-                        alt="agafay activities, lalla takerkoust marrakech, agafay activité, lalla takerkoust activities"
-                        width={1000}
-                        height={1000}
-                        priority
-                        className="object-cover w-full h-full rounded-md"
-                      />
-                    ) : (
-                      <video
-                        className="object-cover h-full w-full rounded-md"
-                        autoPlay
-                        loop
-                        muted
-                      >
-                        <source src={`${item.src}`} type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                    )}
-                  </SwiperSlide>
-                );
-              })}
-            </div>
-          </Swiper>
-        </div>
-        {/* Filter */}
+        {isMobile ? (
+          <div className="w-full h-[80vh] md:hidden block">
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              speed={1400}
+              loop={true}
+              navigation={{
+                nextEl: ".swiper-button-next-ex1",
+                prevEl: ".swiper-button-prev-ex1",
+              }}
+              className="swiper w-full h-full"
+              id="slider1"
+            >
+              <div className="swiper-wrapper">
+                {itemsMobile.map((item, i) => {
+                  return (
+                    <SwiperSlide key={i}>
+                      {item.type === "image" ? (
+                        <Image
+                          src={`${item.src}`}
+                          alt="agafay activities, lalla takerkoust marrakech, agafay activité, lalla takerkoust activities"
+                          width={1000}
+                          height={1000}
+                          priority
+                          className="object-cover w-full h-full rounded-md"
+                        />
+                      ) : (
+                        <video
+                          className="object-cover h-full w-full rounded-md"
+                          autoPlay
+                          loop
+                          muted
+                        >
+                          <source src={`${item.src}`} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      )}
+                    </SwiperSlide>
+                  );
+                })}
+              </div>
+            </Swiper>
+          </div>
+        ) : (
+          <Image
+            src="/images/activities.jpg"
+            alt="agafay activities, agafay marrakech, agafay activité, lalla takerkoust activities"
+            height={1000}
+            width={1000}
+            priority
+            className="object-cover w-full h-full rounded-md md:block hidden"
+          />
+        )}
       </div>
       <div className="w-full flex flex-col justify-center items-center gap-4 pt-10 pb-5 shadow-md rounded-lg px-5">
         <Slides />
         <div className="w-full h-full flex flex-col justify-start items-center gap-1 text-center  lg:px-16">
           <h1 className="text-[20px] leading-[36px]  font-azahra tracking-[2px] uppercase text-primary_2 my-10">
-            <TypeAnimation
-              sequence={[t("activities.title"), 2000]}
-              wrapper="span"
-              speed={10}
-              repeat={Infinity}
-            />
+            {t("activities.title")}
           </h1>
           <Accordion />
           <Link
