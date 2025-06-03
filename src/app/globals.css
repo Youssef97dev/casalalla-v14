@@ -19,24 +19,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "BillCorporateNarrow";
-  src: url("./fonts/billcorpnar-light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "BillCorporateNarrow";
-  src: url("./fonts/billcorpnar-extralight.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: "BillCorporateNarrow";
-  src: url("./fonts/billcorpnar-thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
   font-family: "Azahra";
   src: url("./fonts/Azahra.woff") format("woff");
   font-weight: 400;
