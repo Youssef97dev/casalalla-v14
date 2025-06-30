@@ -37,16 +37,16 @@ const About = () => {
           <h1 className="text-[20px] leading-[36px]  font-azahra tracking-[2px] uppercase text-primary_2 mb-5">
             {t("about.title")}
           </h1>
-          <p className="text-[16px] leading-[34px] px-0 2xl:px-12 ">
+          <p className="text-[16px] leading-[34px] px-0 2xl:px-12 text-justify">
             {t("about.content_1")}
           </p>
-          <p className="text-[16px] leading-[34px] px-0 2xl:px-12 ">
+          <p className="text-[16px] leading-[34px] px-0 2xl:px-12 text-justify">
             {t("about.content_2")}
           </p>
-          <p className="text-[16px] leading-[34px] px-0 2xl:px-12 ">
+          <p className="text-[16px] leading-[34px] px-0 2xl:px-12 text-justify">
             {t("about.content_3")}
           </p>
-          <p className="text-[16px] leading-[34px] px-0 2xl:px-12 ">
+          <p className="text-[16px] leading-[34px] px-0 2xl:px-12 text-justify">
             {t("about.content_4")}
           </p>
           <Link

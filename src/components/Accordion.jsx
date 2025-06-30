@@ -115,7 +115,9 @@ const Accordion = () => {
               >
                 <div className="space-y-2 p-4 text-[13px] leading-[30px] border-t border-secondary">
                   {item.text.map((text, i) => (
-                    <p key={i}>{text.description}</p>
+                    <p key={i} className="text-justify">
+                      {text.description}
+                    </p>
                   ))}
                 </div>
               </AnimateHeight>

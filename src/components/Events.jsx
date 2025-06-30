@@ -38,7 +38,9 @@ const Events = () => {
           <h1 className="text-[20px] leading-[36px]  font-azahra tracking-[2px] uppercase text-primary_2 mb-5">
             {t("events.title")}
           </h1>
-          <p className="text-[16px] leading-[34px] ">{t("events.content")}</p>
+          <p className="text-[16px] leading-[34px] text-justify">
+            {t("events.content")}
+          </p>
         </div>
       </div>
     </div>
