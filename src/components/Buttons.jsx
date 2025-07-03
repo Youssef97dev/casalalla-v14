@@ -14,7 +14,6 @@ const Buttons = () => {
         {t("navbar.cart")}
       </Link>
       <Link
-        target="_blank"
         href="/booking"
         className="w-full rounded-lg bg-primary_2 hover:bg-book_btn_hover text-white py-2 text-center shadow-md"
       >
