@@ -17,15 +17,15 @@ import "swiper/css/autoplay";
 
 const itemsMobile = [
   {
-    src: "/images/activities-small-1.jpg",
+    src: "/images/activities-small-1.webp",
     type: "image",
   },
   {
-    src: "/images/activities-small-2.jpg",
+    src: "/images/activities-small-2.webp",
     type: "image",
   },
   {
-    src: "/images/activities-small-3.jpg",
+    src: "/images/activities-small-3.webp",
     type: "image",
   },
   {
@@ -100,7 +100,7 @@ const Activities = () => {
           </div>
         ) : (
           <Image
-            src="/images/activities.jpg"
+            src="/images/activities.webp"
             alt="agafay activities, agafay marrakech, agafay activité, lalla takerkoust activities"
             height={1000}
             width={1000}

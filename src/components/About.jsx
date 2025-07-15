@@ -23,7 +23,9 @@ const About = () => {
     >
       <div className="relative w-full">
         <Image
-          src={isMobile ? "/images/about-large.jpg" : "/images/about-small.jpg"}
+          src={
+            isMobile ? "/images/about-large.webp" : "/images/about-small.webp"
+          }
           height={1000}
           width={1000}
           alt="casa lalla takerkoust, agafay marrakech, agafay restaurant, lalla takerkoust restaurant"

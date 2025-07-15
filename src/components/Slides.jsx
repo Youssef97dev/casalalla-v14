@@ -4,34 +4,34 @@ import { useState, useEffect } from "react";
 
 const images = [
   {
-    src: "/images/activities-slide-1.jpg",
+    src: "/images/activities-slide-1.webp",
   },
   {
-    src: "/images/activities-slide-2.jpg",
+    src: "/images/activities-slide-2.webp",
   },
   {
-    src: "/images/activities-slide-3.jpg",
+    src: "/images/activities-slide-3.webp",
   },
   {
-    src: "/images/activities-slide-4.jpg",
+    src: "/images/activities-slide-4.webp",
   },
   {
-    src: "/images/activities-slide-5.jpg",
+    src: "/images/activities-slide-5.webp",
   },
   {
-    src: "/images/activities-slide-6.jpg",
+    src: "/images/activities-slide-6.webp",
   },
   {
-    src: "/images/activities-slide-7.jpg",
+    src: "/images/activities-slide-7.webp",
   },
   {
-    src: "/images/activities-slide-8.jpg",
+    src: "/images/activities-slide-8.webp",
   },
   {
-    src: "/images/activities-slide-9.jpg",
+    src: "/images/activities-slide-9.webp",
   },
   {
-    src: "/images/activities-slide-10.jpg",
+    src: "/images/activities-slide-10.webp",
   },
 ];
 

@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const imagesUrl = [
-  "/images/gallery-1.jpeg",
-  "/images/gallery-2.jpeg",
-  "/images/gallery-3.jpeg",
+  "/images/gallery-1.webp",
+  "/images/gallery-2.webp",
+  "/images/gallery-3.webp",
 ];
 
 const Gallery = () => {
@@ -34,7 +34,7 @@ const Gallery = () => {
       <Link href="/gallery" className="cursor-pointer p-3 rounded-md">
         <div className="flex h-full w-full justify-center items-center  relative md:hidden">
           <Image
-            src="/images/hero-casalalla-large.jpg"
+            src="/images/hero-casalalla-large.webp"
             alt="casa lalla tekerkoust, agafay desert, white camel agafay, agafay activités"
             width={600}
             height={700}

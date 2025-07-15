@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
 const itemsMobile = [
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/jem8xv0zui8wzo1lwtku",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/wc2stizi7i5s5wgeeogy",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/prpqg6qvbzkgcrqhqlpz",
-  "https://res.cloudinary.com/dz7wroord/image/upload/f_auto,q_auto/v1/CasaLalla-VNor/rpgxdw9fkmlskq2r871m",
+  "/images/activities-slide-2.webp",
+  "/images/gallery-2.webp",
+  "/images/gallery-3.webp",
+  "/image/book-mobile.webp",
 ];
 
 const MobileSlides = () => {
@@ -59,7 +59,7 @@ const MobileSlides = () => {
           height={300}
           alt="Restaurants à Lalla takerkoust, Restaurants à Marrakech, Restaurants à Agafay, Restaurants à Imlil, Restaurants Désert Agafay, Restaurants Montagnes Atlas, Riad Marrakech, Hotel Riad Casa Lalla"
           placeholder="blur"
-          blurDataURL="/images/image-blur.jpg"
+          blurDataURL="/images/image-blur.webp"
           priority
           className="w-[40%] max-h-full object-cover"
         />

@@ -23,7 +23,7 @@ const Events = () => {
       <div className="relative w-full">
         <Image
           src={
-            isMobile ? "/images/events-large.jpg" : "/images/events-small.jpg"
+            isMobile ? "/images/events-large.webp" : "/images/events-small.webp"
           }
           height={1000}
           width={1000}

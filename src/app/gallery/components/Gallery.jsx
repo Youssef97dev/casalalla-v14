@@ -7,85 +7,85 @@ import Link from "next/link";
 
 const images = [
   {
-    src: "/gallery/gallery-1.jpg",
+    src: "/gallery/gallery-1.webp",
   },
   {
-    src: "/gallery/gallery-2.jpg",
+    src: "/gallery/gallery-2.webp",
   },
   {
-    src: "/gallery/gallery-3.jpg",
+    src: "/gallery/gallery-3.webp",
   },
   {
-    src: "/gallery/gallery-4.jpg",
+    src: "/gallery/gallery-4.webp",
   },
   {
-    src: "/images/activities-slide-2.jpg",
+    src: "/images/activities-slide-2.webp",
   },
   {
-    src: "/images/activities-slide-3.jpg",
+    src: "/images/activities-slide-3.webp",
   },
   {
-    src: "/images/activities-slide-7.jpg",
+    src: "/images/activities-slide-7.webp",
   },
   {
-    src: "/images/about-large.jpg",
+    src: "/images/about-large.webp",
   },
   {
-    src: "/images/gallery-3.jpeg",
+    src: "/images/gallery-3.webp",
   },
   {
-    src: "/gallery/gallery-5.jpg",
+    src: "/gallery/gallery-5.webp",
   },
   {
-    src: "/gallery/gallery-6.jpg",
+    src: "/gallery/gallery-6.webp",
   },
   {
-    src: "/gallery/gallery-7.jpg",
+    src: "/gallery/gallery-7.webp",
   },
   {
-    src: "/gallery/gallery-8.jpg",
+    src: "/gallery/gallery-8.webp",
   },
   {
-    src: "/images/gallery-2.jpeg",
+    src: "/images/gallery-2.webp",
   },
   {
-    src: "/gallery/gallery-9.jpg",
+    src: "/gallery/gallery-9.webp",
   },
   {
-    src: "/images/book-mobile.jpg",
+    src: "/images/book-mobile.webp",
   },
   {
-    src: "/gallery/gallery-10.jpg",
+    src: "/gallery/gallery-10.webp",
   },
   {
-    src: "/gallery/gallery-11.jpg",
+    src: "/gallery/gallery-11.webp",
   },
   {
-    src: "/gallery/gallery-12.jpg",
+    src: "/gallery/gallery-12.webp",
   },
   {
-    src: "/gallery/gallery-13.jpg",
+    src: "/gallery/gallery-13.webp",
   },
   {
-    src: "/gallery/gallery-14.jpg",
+    src: "/gallery/gallery-14.webp",
   },
   {
-    src: "/gallery/gallery-15.jpg",
+    src: "/gallery/gallery-15.webp",
   },
   {
-    src: "/gallery/gallery-16.jpg",
+    src: "/gallery/gallery-16.webp",
   },
   {
-    src: "/gallery/gallery-17.jpg",
+    src: "/gallery/gallery-17.webp",
   },
   {
-    src: "/gallery/gallery-18.jpg",
+    src: "/gallery/gallery-18.webp",
   },
   {
-    src: "/images/hero-casalalla-large.jpg",
+    src: "/images/hero-casalalla-large.webp",
   },
   {
-    src: "/gallery/gallery-19.jpg",
+    src: "/gallery/gallery-19.webp",
   },
 ];
 
